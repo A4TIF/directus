@@ -3,12 +3,10 @@ import { isDirectusError } from '@directus/errors';
 import type { Accountability } from '@directus/types';
 import { uniq } from 'lodash-es';
 import validateUUID from 'uuid-validate';
-import env from '../env.js';
 import { ErrorCode } from '../errors/index.js';
 import logger from '../logger.js';
 import type { AbstractServiceOptions, Item, MutationOptions, PrimaryKey } from '../types/index.js';
 import { getPermissions } from '../utils/get-permissions.js';
-import { Url } from '../utils/url.js';
 import { userName } from '../utils/user-name.js';
 import { AuthorizationService } from './authorization.js';
 import { ItemsService } from './items.js';
@@ -85,9 +83,6 @@ ${userName(sender)} has mentioned you in a comment:
 
 ${comment}
 
-<a href="${new Url(env['PUBLIC_URL'])
-						.addPath('admin', 'content', data['collection'], data['item'])
-						.toString()}">Click here to view.</a>
 `;
 
 					await this.notificationsService.createOne({
