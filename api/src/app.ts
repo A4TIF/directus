@@ -222,12 +222,20 @@ export default async function createApp(): Promise<express.Application> {
 		const sendHtml = (_req: Request, res: Response) => {
 			res.setHeader('Cache-Control', 'no-cache');
 			res.setHeader('Vary', 'Origin, Cache-Control');
+			res.setHeader('X-Frame-Options', 'DENY');
+			res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+			res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+			res.setHeader('X-Content-Type-Options', 'nosniff');
 			res.send(htmlWithVars);
 		};
 
 		const setStaticHeaders = (res: ServerResponse) => {
 			res.setHeader('Cache-Control', 'max-age=31536000, immutable');
 			res.setHeader('Vary', 'Origin, Cache-Control');
+			res.setHeader('X-Frame-Options', 'DENY');
+			res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+			res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+			res.setHeader('X-Content-Type-Options', 'nosniff');
 		};
 
 		app.get('/admin', sendHtml);
