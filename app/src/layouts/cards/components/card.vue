@@ -145,11 +145,11 @@ function handleClick() {
 		justify-content: center;
 		width: 100%;
 		overflow: hidden;
-		background-color: var(--background-normal);
+		background-color: var(--theme--background-normal);
 		border-color: var(--theme--primary-subdued);
 		border-style: solid;
 		border-width: 0px;
-		border-radius: var(--border-radius);
+		border-radius: var(--theme--border-radius);
 		transition: border-width var(--fast) var(--transition);
 
 		&::after {

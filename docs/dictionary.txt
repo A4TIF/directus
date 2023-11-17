@@ -10,9 +10,9 @@
 (B|b)asemap
 (B|b)lackbox
 (B|b)ugfixes
-Butterfield
 (C|)ancelling
 (C|c)ancelled
+(C|c)hangesets?
 (C|c)harset
 (C|c)heckboxes
 (C|c)loudinary
@@ -24,6 +24,7 @@ Butterfield
 (D|d)atacenter
 (D|d)atastores
 (D|d)atetimes?
+(D|d)ev
 (D|d)onut
 (D|d)ropdown
 (D|d)ropdowns
@@ -122,15 +123,13 @@ Base64
 Blackbox
 buildout
 Butterfield
+Butterfield
 camelCase
 Capterra
 Cardgroup
 cardinality
 CDNs?
 changelogs
-changeset
-changesets
-Changesets
 CLA
 CLI
 CloudFront
@@ -166,7 +165,6 @@ customizations
 DateTime
 DDoS
 destructured
-Dev
 devs
 Devtools
 DigitalOcean
